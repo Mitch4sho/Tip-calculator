@@ -1,0 +1,48 @@
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+  }
+
+.bill-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 50px 40px;
+    width: 379px;
+}
+
+.form-control label {
+    font-family: 'Space Mono';
+    height: 24px;
+    font-size: 16px;
+    color: #5E7A7D;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 24px;
+}
+
+.form-control input {
+    display: flex;
+    justify-content: flex-end;
+    width: 379px;
+    height: 48px;
+    margin-top: 3px;
+    background-color: #F3F9FA;
+    color: #00474B;
+    border-radius: 5px;
+    border: none;
+    font-size: 24px;
+    text-align: right;
+}
+
+.form-control.form-bill {
+    display: flex;
+    flex-direction: column;
+}
