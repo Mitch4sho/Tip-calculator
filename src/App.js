@@ -1,32 +1,32 @@
-import React, { useState } from 'react';
-import Bill from './components/Bill component/Bill';
-import Output from './components/Output component/Output';
+import React, { useState } from "react";
+import Bill from "./components/Bill component/Bill";
+import Output from "./components/Output component/Output";
 
 function App() {
   const [bill, setBill] = useState(0);
   const [tip, setTip] = useState(0);
   const [people, setPeople] = useState(0);
-  
-  const handleBillUpdate = () => {
-    console.log('bill updated')
-  }
 
-  const handleTipUpdate = () => {
-    console.log('tip updated')
-  }
+  const handleBillUpdate = () => {
+    console.log("bill updated");
+  };
+
+  const handleTipUpdate = (value) => {
+    console.log("tip updated", value);
+  };
 
   const handlePeopleUpdate = () => {
-    console.log('People updated')
-  }
+    console.log("People updated");
+  };
 
   return (
-    <div className='app'>
-      <div className='header'>
+    <div className="app">
+      <div className="header">
         <h1>Spli</h1>
         <h1>tter</h1>
       </div>
       <div className="container">
-        <Bill />
+        <Bill onTipUpdate={handleTipUpdate} />
         <Output />
       </div>
     </div>
