@@ -12,15 +12,18 @@ function App() {
 
   const handleBillUpdate = (value) => {
     console.log("bill updated");
+    setBill(value);
   };
 
   const handleTipUpdate = (value) => {
-    console.log("tip updated", value);
+    console.log("tip updated");
+    setTip(value * 0.1);
     setActive(false);
   };
 
   const handlePeopleUpdate = (value) => {
     console.log("People updated");
+    setPeople(value);
   };
 
   return (

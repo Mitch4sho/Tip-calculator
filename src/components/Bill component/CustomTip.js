@@ -14,7 +14,7 @@ const CustomTip = ({ customVal, onChange, onCustom, customActive }) => {
       ) : (
         <input
           className="custom"
-          type="text"
+          type="number"
           onChange={(e) => onChange(e.target.value)}
           value={customVal}
         />

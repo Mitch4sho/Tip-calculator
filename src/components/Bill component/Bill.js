@@ -3,7 +3,13 @@ import "./Bill.css";
 import TipButton from "./TipButton";
 import CustomTip from "./CustomTip";
 
-const Bill = ({ onTipUpdate, onCustom, active }) => {
+const Bill = ({
+  onTipUpdate,
+  onBillUpdate,
+  onPeopleUpdate,
+  onCustom,
+  active,
+}) => {
   const [billVal, setBillVal] = useState(0);
   const [peopleVal, setPeopleVal] = useState(0);
   const [customVal, setCustomVal] = useState(0);
@@ -25,6 +31,12 @@ const Bill = ({ onTipUpdate, onCustom, active }) => {
       return;
     } else {
       setErrorBill(false);
+    }
+
+    onBillUpdate(billVal);
+    onPeopleUpdate(peopleVal);
+    if (active) {
+      onTipUpdate(customVal);
     }
 
     setBillVal(0);
@@ -78,7 +90,7 @@ const Bill = ({ onTipUpdate, onCustom, active }) => {
           />
         </ul>
       </div>
-      <div className="form-control">
+      <div className="form-control form-people">
         <div className="labels">
           <label>Number of People</label>
           {errorPeople ? (

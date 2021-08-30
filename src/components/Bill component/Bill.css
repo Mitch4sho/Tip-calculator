@@ -33,7 +33,23 @@ label {
   justify-content: space-between;
 }
 
-.form-control input[type="number"] {
+.form-people input[type="number"] {
+  display: flex;
+  justify-content: flex-end;
+  width: 379px;
+  height: 48px;
+  margin-top: 10px;
+  padding-right: 20px;
+  background-color: #f3f9fa;
+  color: #00474b;
+  border-radius: 5px;
+  border: none;
+  font-size: 24px;
+  text-align: right;
+  cursor: pointer;
+}
+
+.form-bill input[type="number"] {
   display: flex;
   justify-content: flex-end;
   width: 379px;
