@@ -6,10 +6,11 @@ function App() {
   const [bill, setBill] = useState(0);
   const [tip, setTip] = useState(0);
   const [people, setPeople] = useState(0);
+
   // for custom tip
   const [active, setActive] = useState(false);
 
-  const handleBillUpdate = () => {
+  const handleBillUpdate = (value) => {
     console.log("bill updated");
   };
 
@@ -18,7 +19,7 @@ function App() {
     setActive(false);
   };
 
-  const handlePeopleUpdate = () => {
+  const handlePeopleUpdate = (value) => {
     console.log("People updated");
   };
 
@@ -31,10 +32,19 @@ function App() {
       <div className="container">
         <Bill
           onTipUpdate={handleTipUpdate}
+          onBillUpdate={handleBillUpdate}
+          onPeopleUpdate={handlePeopleUpdate}
           onCustom={setActive}
           active={active}
         />
         <Output />
+      </div>
+      <div class="attribution">
+        Challenge by{" "}
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+          Frontend Mentor
+        </a>
+        . Coded by <a href="#">Mitchell</a>.
       </div>
     </div>
   );
