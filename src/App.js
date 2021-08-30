@@ -6,6 +6,8 @@ function App() {
   const [bill, setBill] = useState(0);
   const [tip, setTip] = useState(0);
   const [people, setPeople] = useState(0);
+  // for custom tip
+  const [active, setActive] = useState(false);
 
   const handleBillUpdate = () => {
     console.log("bill updated");
@@ -13,6 +15,7 @@ function App() {
 
   const handleTipUpdate = (value) => {
     console.log("tip updated", value);
+    setActive(false);
   };
 
   const handlePeopleUpdate = () => {
@@ -26,7 +29,11 @@ function App() {
         <h1>tter</h1>
       </div>
       <div className="container">
-        <Bill onTipUpdate={handleTipUpdate} />
+        <Bill
+          onTipUpdate={handleTipUpdate}
+          onCustom={setActive}
+          active={active}
+        />
         <Output />
       </div>
     </div>

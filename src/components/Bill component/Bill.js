@@ -1,13 +1,20 @@
 import React, { useState } from "react";
 import "./Bill.css";
 import TipButton from "./TipButton";
+import CustomTip from "./CustomTip";
 
-const Bill = ({ onTipUpdate }) => {
+const Bill = ({ onTipUpdate, onCustom, active }) => {
   const [billVal, setBillVal] = useState(0);
   const [peopleVal, setPeopleVal] = useState(0);
+  const [customVal, setCustomVal] = useState(0);
+
+  const onSubmit = (e) => {
+    if (peopleVal === 0) {
+    }
+  };
 
   return (
-    <form className="bill-form">
+    <form className="bill-form" onSubmit={(e) => onSubmit(e)}>
       <div className="form-control form-bill">
         <label>Bill</label>
         <input
@@ -15,6 +22,7 @@ const Bill = ({ onTipUpdate }) => {
           value={billVal}
           placeholder="Enter bill amount"
           onChange={(e) => setBillVal(e.target.value)}
+          required
         />
       </div>
       <div className="form-control">
@@ -25,16 +33,25 @@ const Bill = ({ onTipUpdate }) => {
           <TipButton value={15} onClick={onTipUpdate} />
           <TipButton value={25} onClick={onTipUpdate} />
           <TipButton value={50} onClick={onTipUpdate} />
-          <input className="Custom" type="button" value="Custom" />
+          <CustomTip
+            customVal={customVal}
+            onChange={setCustomVal}
+            onCustom={onCustom}
+            customActive={active}
+          />
         </ul>
       </div>
       <div className="form-control">
-        <label>Number of People</label>
+        <div className="labels">
+          <label>Number of People</label>
+          <label>Can't be zero</label>
+        </div>
         <input
           type="number"
           value={peopleVal}
           placeholder="Enter people"
           onChange={(e) => setPeopleVal(e.target.value)}
+          required
         />
       </div>
     </form>

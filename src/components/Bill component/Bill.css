@@ -27,6 +27,11 @@ label {
   font-style: normal;
   line-height: 24px;
 }
+/* error labels */
+.labels {
+  display: flex;
+  justify-content: space-between;
+}
 
 .form-control input[type="number"] {
   display: flex;
@@ -82,4 +87,24 @@ label {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+/* for custom input */
+.form-control .custom {
+  width: 117px;
+  height: 48px;
+  font-family: "Space Mono";
+  font-size: 24px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #f3f9fa;
+  color: #00474b;
+  text-align: right;
+  padding-right: 20px;
+}
+
+.form-control .custom:hover {
+  border: 1px solid #26c2ae;
 }
