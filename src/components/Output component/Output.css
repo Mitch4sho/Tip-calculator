@@ -1,7 +1,13 @@
 .output-component {
-    background-color: #00474B;
-    color: #FFFF;
-    width: 413px;
-    margin: 50px 40px;
-    border-radius: 20px;
+  background-color: #00474b;
+  color: #ffff;
+  width: 413px;
+  margin: 50px 40px;
+  padding: 40px;
+  border-radius: 20px;
+}
+
+.total-container {
+  display: flex;
+  justify-content: space-between;
 }
