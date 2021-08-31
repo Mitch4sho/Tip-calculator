@@ -2,12 +2,14 @@ import React from "react";
 import Total from "./Total.js";
 import "./Output.css";
 
-const Output = () => {
+const Output = ({ bill, tip, people }) => {
   return (
     <div className="output-component">
-      <Total value="Tip Amount" />
-      <Total value="Total" />
-      <button className="reset-btn">Reset</button>
+      <section className="total-section">
+        <Total value="Tip Amount" amount={4.27} />
+        <Total value="Total" amount={32.78} />
+      </section>
+      <button className="reset-btn">RESET</button>
     </div>
   );
 };

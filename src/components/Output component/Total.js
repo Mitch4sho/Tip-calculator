@@ -1,13 +1,13 @@
 import React from "react";
 
-const Total = ({ value }) => {
+const Total = ({ value, amount }) => {
   return (
     <div className="total-container">
       <div>
-        <p>{value}</p>
+        <h4>{value}</h4>
         <p>/ person</p>
       </div>
-      <h1>$4.27</h1>
+      <div className="total-value">{amount ? `$${amount}` : 0}</div>
     </div>
   );
 };

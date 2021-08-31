@@ -42,14 +42,7 @@ function App() {
           onCustom={setActive}
           active={active}
         />
-        <Output />
-      </div>
-      <div class="attribution">
-        Challenge by{" "}
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
-          Frontend Mentor
-        </a>
-        . Coded by <a href="#">Mitchell Oliver</a>.
+        <Output bill={bill} tip={tip} people={people} />
       </div>
     </div>
   );
