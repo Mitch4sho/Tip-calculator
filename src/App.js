@@ -12,22 +12,26 @@ function App() {
 
   const handleBillUpdate = (value) => {
     console.log("bill updated");
-    setBill(value);
+    setBill(parseInt(value));
   };
 
   const handleTipUpdate = (value) => {
     console.log("tip updated");
-    setTip(value * 0.1);
+    setTip(parseInt(value) * 0.01);
     setActive(false);
   };
 
   const handlePeopleUpdate = (value) => {
     console.log("People updated");
-    setPeople(value);
+    setPeople(parseInt(value));
   };
 
   // Reset tp initial state
-
+  const handleResetState = () => {
+    setBill(0);
+    setTip(0);
+    setPeople(0);
+  };
   return (
     <div className="app">
       <div className="header">
@@ -42,7 +46,12 @@ function App() {
           onCustom={setActive}
           active={active}
         />
-        <Output bill={bill} tip={tip} people={people} />
+        <Output
+          bill={bill}
+          tip={tip}
+          people={people}
+          resetState={handleResetState}
+        />
       </div>
     </div>
   );
