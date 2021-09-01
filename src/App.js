@@ -11,18 +11,15 @@ function App() {
   const [active, setActive] = useState(false);
 
   const handleBillUpdate = (value) => {
-    console.log("bill updated");
     setBill(parseInt(value));
   };
 
   const handleTipUpdate = (value) => {
-    console.log("tip updated");
     setTip(parseInt(value) * 0.01);
     setActive(false);
   };
 
   const handlePeopleUpdate = (value) => {
-    console.log("People updated");
     setPeople(parseInt(value));
   };
 
