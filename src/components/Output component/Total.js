@@ -7,7 +7,7 @@ const Total = ({ value, amount }) => {
         <h4>{value}</h4>
         <p>/ person</p>
       </div>
-      <div className="total-value">{amount ? `$${amount}` : 0}</div>
+      <div className="total-value">{amount ? `$${Math.round(amount)}` : 0}</div>
     </div>
   );
 };
